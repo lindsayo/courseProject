@@ -9,11 +9,10 @@ This file is place inside a ```data``` folder using the download script in ```RE
 ### Variables
 
 * ```paths``` contains the full names for the contents of the ```.zip``` file
-* ```dataFilesInidices```, ```featuresFileIndex``` and ```activityLabelsFileIndex``` contain indices to acceed 
-files using ```paths```
-* ```mergedDatasets```
-* ```rounds```
-* ` `combineDatasets```
+* ```dataFilesInidices```, ```featuresFileIndex``` and ```activityLabelsFileIndex``` contain indices to ```paths```
+* ```mergedDatasets```is a list containing 3 data frames (subject data, features data and activities data)
+* ```rounds``` is used to save each merged data frame to ```mergedDatasets```
+* ` `combineDatasets``` merges data from the train and test datasets using ```ldply``` to save the origins
 * ```featuresFileIndex```
 * ```featuresLabels```
 * ```subSetFeatures```
