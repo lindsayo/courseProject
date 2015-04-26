@@ -49,7 +49,7 @@ names(featuresLabels) <- c("fileName", "featureNumber", "features")
 subSetFeatures <- str_detect(featuresLabels$features, "mean\\(\\)|std\\(\\)")
 
 subSetData <- mergedDatasets$xData[ , 2:ncol(mergedDatasets$xData)]
-subSettData <- subSetData[ , subSetFeatures]
+subSetData <- subSetData[ , subSetFeatures]
 
 ### part 3: use descriptive activity names
 
@@ -80,7 +80,7 @@ names(subSetData) <- featureNames
 ### part 5: tidy dataset with the average of each variable
 tidyDataset <- cbind(subject  = mergedDatasets$subData[ , 2],
                      activity = activityNames[ , 4],
-                     subSortData)
+                     subSetData)
 
 ## convert data from wide to long format
 tidyDataset <- melt(tidyDataset, id.vars = c("subject", "activity"))
