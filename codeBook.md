@@ -17,5 +17,7 @@ names
 * ```featuresLabels```, ```activityLabels``` contain names from ```features.txt``` and ```activity_labels.txt```
 * ```subSetFeatures``` is a logic vector indicating ```featuresLabels``` that contain measures on the ```mean``` or ```std```
 * ```subSetData``` is the data frame resulting from passing ```subSetFeatures``` to the collumns of our features data
+* ```activityNames``` is a data frame resulting fromp the ```join``` between activities data and respective 
+```activityLabels```
 
 ### About the script
