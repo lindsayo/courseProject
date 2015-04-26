@@ -46,10 +46,10 @@ featuresLabels <- ldply(paths[featuresFileIndex],
                         })
 names(featuresLabels) <- c("fileName", "featureNumber", "features")
 
-subSortFeatures <- str_detect(featuresLabels$features, "mean\\(\\)|std\\(\\)")
+subSetFeatures <- str_detect(featuresLabels$features, "mean\\(\\)|std\\(\\)")
 
 subSetData <- mergedDatasets$xData[ , 2:ncol(mergedDatasets$xData)]
-subSettData <- subSetData[ , subSettFeatures]
+subSettData <- subSetData[ , subSetFeatures]
 
 ### part 3: use descriptive activity names
 
