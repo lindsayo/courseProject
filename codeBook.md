@@ -9,8 +9,8 @@ This file is place inside a ```data``` folder using the download script in ```RE
 ### Variables
 
 * ```paths``` contains the full names for the contents of the ```.zip``` file
-* ```dataFilesInidices```, ```featuresFileIndex``` and ```activityLabelsFileInex``` contain indices to acceed 
-particular files inside the ```.zip``` file
+* ```dataFilesInidices```, ```featuresFileIndex``` and ```activityLabelsFileIndex``` contain indices to acceed 
+files using ```paths```
 * ```mergedDatasets```
 * ```rounds```
 * ` `combineDatasets```
