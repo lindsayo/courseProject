@@ -14,9 +14,9 @@ This file is place inside a ```data``` folder using the download script in ```RE
 * ```rounds``` is used to save each merged data frame to ```mergedDatasets```
 * ```combineDatasets``` merges data from the train and test data sets using ```ldply``` so we preserve original file 
 names
-* ```featuresLabels``` contains feature names from ```features.txt```
-* ```subSetFeatures``` is a logic vector indicating features names that contain measures on the ```mean``` or 
+* ```featuresLabels```, ```activityLabels``` contain names from ```features.txt``` and ```activity_labels.txt```
+* ```subSetFeatures``` is a logic vector indicating ```featuresLabels``` that contain measures on the ```mean``` or 
 ```std```
-* ```
+* ```subSetData``` is the data frame resulting from passing ```subSetFeatures``` to the collumns of our features data
 
 ### About the script
