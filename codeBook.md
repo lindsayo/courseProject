@@ -21,10 +21,21 @@ names
 * ```featureNames``` results from passing ```subSetFeatures``` to ```featuresLabels``` and ```str_replace_all``` 
 invalid characters
 * ```featureNames``` is used to rename the collumns of ```subSetData```
-* the names in ```featureNames``` are considered to be descriptive
-* ```tidyDataset``` ```cbinds``` subject id, activities labels and ```subSetData``` into a single data frame
-* ```tidyDataset``` is in long format
-* ```tidyAverageValues``` is our ```tidyDataset``` ```grouped_by``` subject, activity and variable
-* ```tidyAverageValues``` is ```summarized``` with the average. 
+* ```featureNames``` are considered to be descriptive
+* ```tidyDataset``` ```cbinds``` subject id, activities labels and ```subSetData``` into a long format data frame
+* ```tidyAverageValues``` takes the ```tidyDataset``` and ```groups_by``` subject, activity and variable
+* ```tidyAverageValues``` is ```summarized``` using the average of the values.
 
 ### About the script
+
+The script performs 5 steps:
+
+* Merging the training and the test data sets
+* Selects relevant features
+* Applies descriptive activities names
+* Applies descriptive features names
+* Produces a tidy data set with the average values.
+
+The result is the ```tidyAverageValues.txt``` file in the repo.
+
+For more information about the procedure please see the ```README.md```.
