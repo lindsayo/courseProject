@@ -42,7 +42,7 @@ For more information about the procedure please see the ```README.md```.
 
 ### About ```tidyAverageValues.txt```
 
-* ```subject```: volunteer id, integer from 1 to 30
-* ```activity```: activity label, factor with 6 levels
-* ```variable```: variable name or attribute, factor with 67 levels
-* ```average```: average value for each subject, activity and attribute
+* ```subject```: volunteer id (integer from 1 to 30)
+* ```activity```: activity label (factor with 6 levels)
+* ```variable```: variable name or attribute (factor with 67 levels)
+* ```average```: average value for each subject, activity and attribute (numeric)
