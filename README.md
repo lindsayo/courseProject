@@ -56,20 +56,25 @@ mergedDatasets <- list()
 rounds <- 0
 for(i in dataFilesIndices) {
     rounds <- rounds + 1
-    combineDatasets <- ldply(paths[i], function(x) read.table(unz("data/downloadedData.zip", x)))
+    combineDatasets <- ldply(paths[i], 
+                             function(x) {
+                                read.table(unz("data/downloadedData.zip", x))
+                             })
     mergedDatasets[[rounds]] <- combineDatasets
 }
 
 names(mergedDatasets) <- c("subData", "xData", "yData")
 ~~~
 
-Please note above that the data is nested inside a .zip folder, thus requiring an additional connection (```unz```).
+Please note above that the data is nested inside a .zip folder, thus requiring aonnection (```unz```).
 
 ### 2. Select relevant features
 
 We are required to extract the features on the mean and standard deviation for each measurement.
 
-First we need to import the ```features.txt``` into ```R```. Having that we proceed  to using ```str_detect``` from ```stringr```.
+First we need to import the ```features.txt``` into ```R```. 
+
+Having that we proceed  to using ```str_detect``` from ```stringr```.
 
 From ```str_detect``` we obtain a logic vector to be used to subset our dataset.
 
@@ -103,7 +108,9 @@ activityNames <- join(mergedDatasets$yData, activityLabels, by="V1")
 
 The main problem with the provided names is that they contain invalid characters.
 
-To replace invalid characters we use ```str_replace_all``` (```stringr```) but ```gsub``` from base ```R``` could be employed.
+To replace invalid characters we use ```str_replace_all``` (```stringr```). 
+
+In alternative ```gsub``` from base ```R``` could be employed.
 
 To sort relevant features we again use the logic vector obtained with ```str_detect``` above.
 
@@ -123,7 +130,7 @@ names(subSortData) <- featureNames
 
 ### 5. Producing the tidy dataset with the average values
 
-The first thing the script does is convert our data from wide to long format. This is mostly a matter of personal preference.
+The first thing the script does is **convert our data from wide to long format**.
 
 We use the ```melt``` function from ```reshape2```.
 
@@ -149,4 +156,4 @@ Finally we export the resulting dataset using ```write.table```.
 write.table(tidyAverageValues, file = "tidyAverageValues.txt", row.names = FALSE)
 ~~~
 
-This final product corresponds to the  ```tidyAverageValues``` file in the repo.
+The final product corresponds to the  ```tidyAverageValues``` file in the repo.

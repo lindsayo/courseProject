@@ -48,8 +48,8 @@ names(featuresLabels) <- c("fileName", "featureNumber", "features")
 
 subSortFeatures <- str_detect(featuresLabels$features, "mean\\(\\)|std\\(\\)")
 
-subSortData <- mergedDatasets$xData[ , 2:ncol(mergedDatasets$xData)]
-subSortData <- subSortData[ , subSortFeatures]
+subSetData <- mergedDatasets$xData[ , 2:ncol(mergedDatasets$xData)]
+subSettData <- subSetData[ , subSettFeatures]
 
 ### part 3: use descriptive activity names
 
@@ -65,7 +65,7 @@ dim(activityNames) # 10299 obs. of 4 variables
 
 ### part 4: use descriptive variable names
 
-featureNames <- featuresLabels$features[subSortFeatures]
+featureNames <- featuresLabels$features[subSetFeatures]
 replacements <- list(c("\\(\\)", ""),
                      c("-", ""),
                      c("mean", "Mean"),
@@ -75,7 +75,7 @@ for(j in replacements) {
     featureNames <- str_replace_all(featureNames, j[1], j[2])
 }
 
-names(subSortData) <- featureNames
+names(subSetData) <- featureNames
 
 ### part 5: tidy dataset with the average of each variable
 tidyDataset <- cbind(subject  = mergedDatasets$subData[ , 2],
