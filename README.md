@@ -25,19 +25,18 @@ The proposed procedure requires the following ```R``` packages: ```plyr```,  ```
 
 If needed ```stringr``` can be replaced using ```grep``` and ```gsub```.
 
-The ```R``` script ```run_analysis.R``` transforms the raw data into:
-* A tidy dataset
-* Grouped by **feature**, **activity** and **subject**
-* Summarized with the **average** value.
-
-To make it happen and in compliance with the instructions provided the following process is to be applied.
-
 ### Overview
 
 The repo contains 4 files:
 * ```README.md``` explains the analysis files
-* ```run_analysis.R``` can be run to transform the original data in a tidy dataset ```tidyAverageValues.txt```
-* ```tidyAverageValues.txt``` is a **long format** tidy dataset with the average of feature for each activity and each subject
+* ```run_analysis.R``` can be run to transform the original Samsung data
+* ```tidyAverageValues.txt``` is a **long format** tidy dataset resulting from ```run_analysis.R```
+* ```codeBook.md``` describes the different variables.
+
+The ```R``` script ```run_analysis.R``` transforms the raw data into:
+* A tidy dataset
+* Grouped by **feature**, **activity** and **subject**
+* Summarized with the **average** value.
 
 ### 1. Merging the training and the test datasets
 
