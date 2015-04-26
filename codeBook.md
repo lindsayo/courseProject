@@ -16,8 +16,15 @@ This file is place inside a ```data``` folder using the download script in ```RE
 names
 * ```featuresLabels```, ```activityLabels``` contain names from ```features.txt``` and ```activity_labels.txt```
 * ```subSetFeatures``` is a logic vector indicating ```featuresLabels``` that contain measures on the ```mean``` or ```std```
-* ```subSetData``` is the data frame resulting from passing ```subSetFeatures``` to the collumns of our features data
-* ```activityNames``` is a data frame resulting fromp the ```join``` between activities data and respective 
-```activityLabels```
+* ```subSetData``` is the data frame resulting from passing ```subSetFeatures``` to the collumns of features data
+* ```activityNames``` is a data frame resulting from the ```join``` between activities data and respective ```activityLabels```
+* ```featureNames``` results from passing ```subSetFeatures``` to ```featuresLabels``` and ```str_replace_all``` 
+invalid characters
+* ```featureNames``` is used to rename the collumns of ```subSetData```
+* the names in ```featureNames``` are considered to be descriptive
+* ```tidyDataset``` ```cbinds``` subject id, activities labels and ```subSetData``` into a single data frame
+* ```tidyDataset``` is in long format
+* ```tidyAverageValues``` is our ```tidyDataset``` ```grouped_by``` subject, activity and variable
+* ```tidyAverageValues``` is ```summarized``` with the average. 
 
 ### About the script
