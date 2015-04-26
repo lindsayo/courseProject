@@ -15,8 +15,7 @@ This file is place inside a ```data``` folder using the download script in ```RE
 * ```combineDatasets``` merges data from the train and test data sets using ```ldply``` so we preserve original file 
 names
 * ```featuresLabels```, ```activityLabels``` contain names from ```features.txt``` and ```activity_labels.txt```
-* ```subSetFeatures``` is a logic vector indicating ```featuresLabels``` that contain measures on the ```mean``` or 
-```std```
+* ```subSetFeatures``` is a logic vector indicating ```featuresLabels``` that contain measures on the ```mean``` or ```std```
 * ```subSetData``` is the data frame resulting from passing ```subSetFeatures``` to the collumns of our features data
 
 ### About the script
