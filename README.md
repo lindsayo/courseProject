@@ -29,7 +29,7 @@ If needed ```stringr``` can be replaced using ```grep``` and ```gsub```.
 
 The repo contains 4 files:
 * ```README.md``` explains the analysis files
-* ```run_analysis.R``` can be run to transform the original Samsung data
+* ```run_analysis.R``` can be run to transform the original Samsung data in the current directory
 * ```tidyAverageValues.txt``` is a **long format** tidy dataset resulting from ```run_analysis.R```
 * ```codeBook.md``` describes the different variables.
 
@@ -135,7 +135,7 @@ tidyDataset <- melt(tidyDataset, id.vars = c("subject", "activity"))
 
 Then we use the ```group_by``` and summarize functions from the ```dplyr``` package. 
 
-This way we get our **tidy data set with the average of each variable for each activity and each subject**.
+This way we get our tidy data set with the **average of each variable for each activity and each subject**.
 
 ~~~r
 tidyAverageValues <- tidyDataset %>%
