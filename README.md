@@ -135,7 +135,7 @@ tidyDataset <- melt(tidyDataset, id.vars = c("subject", "activity"))
 
 Then we use the ```group_by``` and summarize functions from the ```dplyr``` package. 
 
-This way we get our tidy data set with the **average of each variable for each activity and each subject**.
+This way we get our **tidy dataset**.
 
 ~~~r
 tidyAverageValues <- tidyDataset %>%
